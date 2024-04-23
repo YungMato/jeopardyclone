@@ -1,0 +1,99 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 15px;
+}
+
+#playfield {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+#frageFeld {
+    padding: 10px;
+    color: white;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 56vh;
+
+    margin-bottom: 15px;
+}
+
+#kategorien {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+}
+
+.kategorie{
+    background-color: #6776ea;
+    height: 7vh;
+    width: 12vw;
+
+    border-radius: 8px;
+}
+
+.feld {
+    background-color: #acb5ff;
+    height: 9vh;
+    width: 12vw;
+
+    border-radius: 8px;
+}
+
+.feld:hover{
+    cursor: pointer;
+}
+
+#players {
+    display: flex;
+    justify-content: space-around;
+}
+
+.playercard {
+    height: 30vh;
+    width: 20vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#playerActive{
+    border: 3px yellow solid;
+}
+
+.playerpic {
+    background-color: black;
+    height: 22vh;
+    width: 80%;
+}
+
+.playerbottom{
+    color: white;
+    background-color: blue;
+    height: 8vh;
+    width: 100%;
+}
+
+.frageActive {
+    opacity: 50%;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Mato's Gamenight</h1>
+    
+    <div id="playfield">
+        <div id="kategorien">
+            <div class="kategorie">Thema 1</div>
+            <div class="kategorie">Thema 2</div>
+            <div class="kategorie">Thema 3</div>
+            <div class="kategorie">Thema 4</div>
+            <div class="kategorie">Thema 5</div>
+            <div class="kategorie">Thema 6</div>
+            <div class="feld" id="t0f1">20</div>
+            <div class="feld" id="t1f1">20</div>
+            <div class="feld" id="t2f1">20</div>
+            <div class="feld" id="t3f1">20</div>
+            <div class="feld" id="t4f1">20</div>
+            <div class="feld" id="t5f1">20</div>
+            <div class="feld" id="t0f2">40</div>
+            <div class="feld" id="t1f2">40</div>
+            <div class="feld" id="t2f2">40</div>
+            <div class="feld" id="t3f2">40</div>
+            <div class="feld" id="t4f2">40</div>
+            <div class="feld" id="t5f2">40</div>
+            <div class="feld" id="t0f3">60</div>
+            <div class="feld" id="t1f3">60</div>
+            <div class="feld" id="t2f3">60</div>
+            <div class="feld" id="t3f3">60</div>
+            <div class="feld" id="t4f3">60</div>
+            <div class="feld" id="t5f3">60</div>
+            <div class="feld" id="t0f4">80</div>
+            <div class="feld" id="t1f4">80</div>
+            <div class="feld" id="t2f4">80</div>
+            <div class="feld" id="t3f4">80</div>
+            <div class="feld" id="t4f4">80</div>
+            <div class="feld" id="t5f4">80</div>
+            <div class="feld" id="t0f5">100</div>
+            <div class="feld" id="t1f5">100</div>
+            <div class="feld" id="t2f5">100</div>
+            <div class="feld" id="t3f5">100</div>
+            <div class="feld" id="t4f5">100</div>
+            <div class="feld" id="t5f5">100</div>
+        </div>
+    </div>
+
+    <div id="frageFeld" onclick="changeFeld()">
+        <h2 id="thema">Thema</h2>
+        <h1 id="frage">Hier eine Default Frage einfügen</h1>
+        <button onclick="addPoints()">Richtig</button>
+        <h2 id="punkte">20 Punkte</h2>
+
+    </div>
+
+
+
+    <div id="players">
+        <div id="p1" class="playercard">
+            <div class="playerpic" id="playerActive">
+            </div>
+            <div class="playerbottom">0
+            </div>
+        </div>
+        <div id="p2" class="playercard">
+            <div class="playerpic">
+            </div>
+            <div class="playerbottom">0
+            </div>
+        </div>
+        <div id="p3" class="playercard">
+            <div class="playerpic">
+            </div>
+            <div class="playerbottom">0
+            </div>
+        </div>
+        <div id="p4" class="playercard">
+            <div class="playerpic">
+            </div>
+            <div class="playerbottom">0
+            </div>
+        </div>
+    </div>
+
+    <script src="jquery-3.7.1.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

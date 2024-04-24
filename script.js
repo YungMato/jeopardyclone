@@ -8,9 +8,16 @@ var fragenKatalog1 = [
     "Welche Farbe ist weiß?","Welche Farbe ist weiß2","Welche Farbe ist weiß3","Welche Farbe ist weiß4", "Welche Farbe ist weiß5"
 ];
 
+var wrongAudio = new Audio("/sound/wrong.mp3");
+var rightAudio = new Audio("/sound/right.mp3")
 
 var aktiveThemen = themen1;
 var aktiveFragen = fragenKatalog1;
+p1Points = 0;
+p2Points = 0;
+p3Points = 0;
+p4Points = 0;
+activeValue = 0;
 
 $( document ).ready(function() {
 
@@ -44,6 +51,8 @@ function showFrage(feld){
     $("#thema").html(themen1[thema]);
     $("#frage").html(fragenKatalog1[frage]);
     $("#punkte").html(value*20 + " Punkte");
+
+    activeValue = value*20;
 }
 
 function prepareThemenFelder(){
@@ -53,6 +62,46 @@ function prepareThemenFelder(){
     }
 }
 
-function addPoints(){
-    
+function addPoints(richtig){
+
+    var player = $("#playerActive").parent()[0].id;
+
+    if(richtig == true){
+        rightAudio.play();
+
+        switch(player){
+            case "p1":
+                p1Points += activeValue;
+                $("#playerActive").parent().children().eq(1).html(p1Points);
+                break;
+            case "p2":
+                p2Points += activeValue;
+                $("#playerActive").parent().children().eq(1).html(p2Points);
+                break;
+            case "p3":
+                p3Points += activeValue;
+                $("#playerActive").parent().children().eq(1).html(p3Points);
+                break;
+            case "p4":
+                p4Points += activeValue;
+                $("#playerActive").parent().children().eq(1).html(p4Points);
+                break;
+            default:
+                break;
+        }
+    } else {
+        wrongAudio.play();
+    }
+
+    nextPlayer(player.substring(1,2));
+    changeFeld();
+}
+
+function nextPlayer(curPlayer){
+    console.log(curPlayer);
+    $("#playerActive").removeAttr("id");
+
+    if(curPlayer == 4) curPlayer = 0;
+    $("#players").children().eq(curPlayer).children().eq(0).attr("id","playerActive");
+
 }

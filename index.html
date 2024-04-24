@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Mato's Gamenight</h1>
     
     <div id="playfield">
         <div id="kategorien">
@@ -50,10 +49,14 @@
         </div>
     </div>
 
-    <div id="frageFeld" onclick="changeFeld()">
+    <div id="frageFeld">
         <h2 id="thema">Thema</h2>
         <h1 id="frage">Hier eine Default Frage einfügen</h1>
-        <button onclick="addPoints()">Richtig</button>
+        <div>
+            <button onclick="addPoints(false)">Falsch</button>
+            <button onclick="addPoints(true)">Richtig</button>
+        </div>
+        
         <h2 id="punkte">20 Punkte</h2>
 
     </div>

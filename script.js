@@ -1,11 +1,40 @@
-var themen1 = ["Blau", "Rot", "Schwarz","Lila", "Gelb", "Weiß"];
+var themen1 = ["Musik", "Videospiele", "Serien","Pokemon", "Deutsche Influencer", "Star Wars"];
 var fragenKatalog1 = [
-    "Welche Farbe ist blau?","Welche Farbe ist Blau2","Welche Farbe ist Blau3","Welche Farbe ist Blau4", "Welche Farbe ist Blau5",
-    "Welche Farbe ist rot?","Welche Farbe ist rot2","Welche Farbe ist rot3","Welche Farbe ist rot4", "Welche Farbe ist rot5",
-    "Welche Farbe ist schwarz?","Welche Farbe ist schwarz2","Welche Farbe ist schwarz3","Welche Farbe ist schwarz4", "Welche Farbe ist schwarz5",
-    "Welche Farbe ist lila?","Welche Farbe ist lila2","Welche Farbe ist lila3","Welche Farbe ist lila4", "Welche Farbe ist lila5",
-    "Welche Farbe ist gelb?","Welche Farbe ist gelb2","Welche Farbe ist gelb3","Welche Farbe ist gelb4", "Welche Farbe ist gelb5",
-    "Welche Farbe ist weiß?","Welche Farbe ist weiß2","Welche Farbe ist weiß3","Welche Farbe ist weiß4", "Welche Farbe ist weiß5"
+    "Welches Instrument hat traditionell sechs Saiten und wird oft in der klassischen Musik sowie in verschiedenen Genres wie Jazz, Blues und Rock verwendet?",
+    "Welcher Komponist kreierte Die Zauberflöte?",
+    "Wer war der Lead-Sänger der britischen Band Queen und ist bekannt für seine außergewöhnliche Stimmvielfalt und Bühnenpräsenz?",
+    "Was ist eine Arie?",
+    "Wie viele Tasten besitzt ein Standard-Klavier?", 
+
+    "Welche Materialien braucht man um eine Fackel zu craften in Minecraft?",
+    "Welches Spiel, das von Rockstar Games entwickelt wurde und 2013 veröffentlicht wurde, ist für seine offene Spielwelt, seine Handlungsfreiheit und seine kriminellen Handlungen bekannt?",
+    "Welches Videospiel, das von Hidetaka Miyazaki entwickelt wurde und 2011 veröffentlicht wurde, ist bekannt für seine hohe Schwierigkeit, seine dichte Atmosphäre und seine mysteriöse Erzählweise?",
+    "Welche beliebte Spielereihe, entwickelt von Nintendo, dreht sich um ein Fantasy-Land namens Hyrule?",
+    "Wer ist der Schöpfer der Videospielreihe Metal Gear Solid, die für ihre komplexe Handlung, Stealth-Gameplay und cineastischen Inszenierungen bekannt ist?",
+
+    "In welcher Zeit spielt Stranger Things?",
+    "Nenne mir zwei der vier Geschwister aus Malcolm mittendrin.",
+    "Wo arbeitet Hank aus Breaking Bad?",
+    "Wieviele Kinder hat Francis Frank Gallagher in der Serie Shameless?",
+    "Scrubs: Wie heißt Dr. Kelsos Lieblingscocktail?",
+
+    "Nenne mir ein Typ der sehr effektiv gegen Wasser ist.",
+    "Was sind shiny Pokemon?",
+    "Wieviele Formen hat Icognito?",
+    "Welches Pokémon blockiert in Hoenn den Eingang zur Baumhausen-Arena?",
+    "Welches Pokemon hat die besten Basiswerte und gilt so als stärkstes Pokemon?",
+
+    "Wie heißt das Zwillingsduo was vor allem auf Musical.ly groß wurde?",
+    "Nenne mir einen Influencer der auf Madeira lebt.",
+    "Welche große deutsche Influencerin kommt aus Karlsruhe und kennt man vor allem durch Workoutvideos auf Youtube?",
+    "Welcher Deutsche Youtuber und Streamer heißt mit bürgerlichen Namen Erik Range.",
+    "Wer waren die vier Hauptakteure bei der Longboardtour durch Deutschland 2014?",
+
+    "Welche Farbe hat das Lichtschwert von Imperator Palpatine?",
+    "Wie heißt das berühmte Raumschiff von Han Solo?",
+    "Mit wem ist Rey verwandt?",
+    "Wann wurde Star Wars Episode 1 gedreht?",
+    "Was war Ahsokas Spitzname für Anakin?"
 ];
 
 var wrongAudio = new Audio("/sound/wrong.mp3");

@@ -37,11 +37,50 @@ var fragenKatalog1 = [
     "Was war Ahsokas Spitzname für Anakin?"
 ];
 
+var themen2 = ["Wissenschaft", "Musik", "Videospiele"," Deutsche Influencer", "Filme", "Deutschland"];
+var fragenKatalog2 = [
+    "Welche chemische Verbindung ist für das Grundgerüst des menschlichen Körpers verantwortlich?",
+    "Wer formulierte die berühmte Gleichung E=mc² und was bedeutet sie?",
+    "Welches ist das kleinste Teilchen im Atomkern?",
+    "Die Hauptfunktion der Mitochondrien in einer Zelle besteht darin, Energie in Form von ATP (Adenosintriphosphat) durch den Prozess der Zellatmung zu produzieren.",
+    "Welches astronomische Phänomen wird durch die Kollision von Neutronensternen erzeugt?", 
+
+    "Wer komponierte die berühmte Klaviersonate Für Elise?",
+    "Welches Musikinstrument wird oft als Königin der Instrumente bezeichnet?",
+    "Welches berühmte Musikstück beginnt mit den Worten O Fortuna und ist Teil einer mittelalterlichen Sammlung von Gedichten?",
+    "Wer war der Komponist der Oper Die Zauberflöte?",
+    "Welcher russische Komponist schuf das berühmte Werk Die Bilder einer Ausstellung?",
+
+    "Welches Videospiel wurde 1985 veröffentlicht und ist eines der bekanntesten Jump-and-Run-Spiele?",
+    "Welches Videospiel, das von Mojang entwickelt wurde, ermöglicht es den Spielern, eine Welt aus Blöcken zu erschaffen und zu erkunden?",
+    "Welches Spiel wurde von Hideo Kojima entwickelt und ist bekannt für seine komplexe Handlung und Stealth-Gameplay?",
+    "Welches Videospiel-Franchise wurde von Bethesda Softworks entwickelt und spielt in einer postapokalyptischen Welt, die von Nuklearkriegern zerstört wurde?",
+    "Welches Videospiel wurde von CD Projekt Red entwickelt und basiert auf einer Buchreihe des polnischen Autors Andrzej Sapkowski?",
+
+    "Welcher deutsche Influencer ist bekannt für seine Comedy-Videos auf der Plattform YouTube und seine Rolle als Der Osterhase?",
+    "Welche deutsche Influencerin erlangte Popularität durch ihre Beauty-Tutorials auf YouTube und ist auch als Unternehmerin im Bereich Kosmetik tätig?",
+    "Welcher deutsche Influencer ist für seine humorvollen Vlogs und Lifestyle-Inhalte auf YouTube bekannt und wurde auch als Schauspieler aktiv?",
+    "Welcher deutsche Influencer und Musiker ist bekannt für seine Musikkarriere, insbesondere im Bereich Rap und Hip-Hop, sowie für seine Präsenz auf Social-Media-Plattformen?",
+    "Welche deutsche Influencerin wurde bekannt durch ihre Mode- und Lifestyle-Inhalte auf Instagram und YouTube und hat sich auch als Unternehmerin einen Namen gemacht?",
+
+    "Wer spielt die Hauptrolle in der Filmtrilogie Der Herr der Ringe, die auf den Büchern von J.R.R. Tolkien basiert?",
+    "Welcher Film aus dem Jahr 1977 war der erste Teil einer der erfolgreichsten Filmfranchises aller Zeiten und wurde von George Lucas inszeniert?",
+    "Welcher Regisseur inszenierte den Science-Fiction-Film Inception aus dem Jahr 2010, der für seine komplexe Handlung und visuellen Effekte bekannt ist?",
+    "Welcher Film gewann den Oscar für den besten Film im Jahr 1994 und erzählt die Geschichte eines Mannes, der eine Reise durch die USA unternimmt, nachdem er aus dem Gefängnis entlassen wurde?",
+    "Welcher Film gewann den Oscar für den besten Film im Jahr 2016 und handelt von einer Gruppe von Astronauten, die auf einem lebensfeindlichen Planeten gestrandet sind?",
+
+    "Welche ist die Hauptstadt von Deutschland?",
+    "Wer war der erste Bundeskanzler der Bundesrepublik Deutschland nach dem Zweiten Weltkrieg?",
+    "Welcher Fluss bildet einen Teil der natürlichen Grenze zwischen Deutschland und Frankreich?",
+    "Wie heißt der höchste Berg Deutschlands und auf welchem Bundesland liegt er?",
+    "Welches historische Ereignis führte zur Wiedervereinigung Deutschlands im Jahr 1990?"
+];
+
 var wrongAudio = new Audio("/sound/wrong.mp3");
 var rightAudio = new Audio("/sound/right.mp3")
 
-var aktiveThemen = themen1;
-var aktiveFragen = fragenKatalog1;
+var aktiveThemen = themen2;
+var aktiveFragen = fragenKatalog2;
 p1Points = 0;
 p2Points = 0;
 p3Points = 0;
@@ -78,7 +117,7 @@ function showFrage(feld){
     var frage = (thema * 5 + value) - 1;
 
     $("#thema").html(themen1[thema]);
-    $("#frage").html(fragenKatalog1[frage]);
+    $("#frage").html(aktiveFragen[frage]);
     $("#punkte").html(value*20 + " Punkte");
 
     activeValue = value*20;

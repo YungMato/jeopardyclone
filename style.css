@@ -55,8 +55,8 @@ h1{
 
 #kategorien {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(7, 1fr);
     grid-column-gap: 3px;
     grid-row-gap: 3px;
 
@@ -111,6 +111,10 @@ h1{
     align-items: center;
 }
 
+.playercard:hover{
+    cursor: pointer;
+}
+
 #playerActive{
     border: 3px yellow solid;
 }
@@ -134,9 +138,30 @@ h1{
 
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     font-size: 4vh;
+}
+
+.playerbottom button{
+    height: 100%;
+    width: 4vw;
+
+    border-radius: 10px;
+    background: none;
+
+}
+
+.playerbottom button:hover{
+    cursor: pointer;
+}
+
+.playerbottom img{
+    height: 80%;
+}
+
+.jokerUsed{
+    background-color: rgba(65, 1, 56, 0.712) !important;
 }
 
 .frageActive {

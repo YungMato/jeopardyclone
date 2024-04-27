@@ -37,7 +37,7 @@ var fragenKatalog1 = [
     "Was war Ahsokas Spitzname für Anakin?"
 ];
 
-var themen2 = ["Wissenschaft", "Musik", "Videospiele"," Deutsche Influencer", "Filme", "Deutschland"];
+var themen2 = ["Wissenschaft", "Musik", "Videospiele"," Deutsche Influencer", "Filme", "Deutschland", "Geographie"];
 var fragenKatalog2 = [
     "Welche chemische Verbindung ist für das Grundgerüst des menschlichen Körpers verantwortlich?",
     "Wer formulierte die berühmte Gleichung E=mc² und was bedeutet sie?",
@@ -48,7 +48,7 @@ var fragenKatalog2 = [
     "Wer komponierte die berühmte Klaviersonate Für Elise?",
     "Welches Musikinstrument wird oft als Königin der Instrumente bezeichnet?",
     "Welches berühmte Musikstück beginnt mit den Worten O Fortuna und ist Teil einer mittelalterlichen Sammlung von Gedichten?",
-    "Wer war der Komponist der Oper Die Zauberflöte?",
+    "Nenne mir 3 Metren",
     "Welcher russische Komponist schuf das berühmte Werk Die Bilder einer Ausstellung?",
 
     "Welches Videospiel wurde 1985 veröffentlicht und ist eines der bekanntesten Jump-and-Run-Spiele?",
@@ -73,7 +73,13 @@ var fragenKatalog2 = [
     "Wer war der erste Bundeskanzler der Bundesrepublik Deutschland nach dem Zweiten Weltkrieg?",
     "Welcher Fluss bildet einen Teil der natürlichen Grenze zwischen Deutschland und Frankreich?",
     "Wie heißt der höchste Berg Deutschlands und auf welchem Bundesland liegt er?",
-    "Welches historische Ereignis führte zur Wiedervereinigung Deutschlands im Jahr 1990?"
+    "Welches historische Ereignis führte zur Wiedervereinigung Deutschlands im Jahr 1990?",
+
+    "Welcher ist der größte Ozean der Welt?",
+    "Welcher ist der längste Fluss der Welt?",
+    "Welcher ist der höchste Berg der Welt?",
+    "Welches Land hat die meisten Zeitzonen?",
+    "Welches ist das größte Land der Welt (nach Fläche)?"
 ];
 
 var wrongAudio = new Audio("/sound/wrong.mp3");
@@ -104,6 +110,11 @@ function SetPlayField(){
         changeFeld();
         showFrage(this.id);
     });
+
+    $(".playercard").on("click", function () {
+        $("#playerActive").removeAttr("id");
+        $(this).children().eq(0).attr("id","playerActive");
+    })
 }
 
 function changeFeld(){
@@ -116,7 +127,7 @@ function showFrage(feld){
     var value = parseInt(feld.substring(3,4));
     var frage = (thema * 5 + value) - 1;
 
-    $("#thema").html(themen1[thema]);
+    $("#thema").html(aktiveThemen[thema]);
     $("#frage").html(aktiveFragen[frage]);
     $("#punkte").html(value*20 + " Punkte");
 
@@ -125,7 +136,7 @@ function showFrage(feld){
 
 function prepareThemenFelder(){
 
-    for(var i = 0; i < 6; i++){
+    for(var i = 0; i < 7; i++){
        $(".kategorie").eq(i).html(aktiveThemen[i]);
     }
 }
@@ -140,19 +151,19 @@ function addPoints(richtig){
         switch(player){
             case "p1":
                 p1Points += activeValue;
-                $("#playerActive").parent().children().eq(1).html(p1Points);
+                $("#playerActive").parent().children().eq(1).children().eq(1).html(p1Points);
                 break;
             case "p2":
                 p2Points += activeValue;
-                $("#playerActive").parent().children().eq(1).html(p2Points);
+                $("#playerActive").parent().children().eq(1).children().eq(1).html(p2Points);
                 break;
             case "p3":
                 p3Points += activeValue;
-                $("#playerActive").parent().children().eq(1).html(p3Points);
+                $("#playerActive").parent().children().eq(1).children().eq(1).html(p3Points);
                 break;
             case "p4":
                 p4Points += activeValue;
-                $("#playerActive").parent().children().eq(1).html(p4Points);
+                $("#playerActive").parent().children().eq(1).children().eq(1).html(p4Points);
                 break;
             default:
                 break;
@@ -172,4 +183,19 @@ function nextPlayer(curPlayer){
     if(curPlayer == 4) curPlayer = 0;
     $("#players").children().eq(curPlayer).children().eq(0).attr("id","playerActive");
 
+}
+
+function onButtonLeft(player){
+    var btn = $("#players").children().eq(player).children().eq(1).children().eq(0);
+
+    btn.children().toggle();
+    btn.attr("class","jokerUsed");
+    
+}
+
+function onButtonRight(player){
+    var btn = $("#players").children().eq(player).children().eq(1).children().eq(2);
+
+    btn.children().toggle();
+    btn.attr("class","jokerUsed");
 }

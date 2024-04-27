@@ -190,6 +190,8 @@ function onButtonLeft(player){
 
     btn.children().toggle();
     btn.attr("class","jokerUsed");
+
+    activeValue = activeValue*2;
     
 }
 
